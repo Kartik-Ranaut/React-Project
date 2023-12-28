@@ -1,10 +1,11 @@
-function Input(){
+function Input(props){
     let inputdata="";
     function changeHandler(event){
         inputdata=event.target.value;
     }
     function buttonHandler(){
         console.log(inputdata);
+        props.func(inputdata);
     }
     return(
         <div>
