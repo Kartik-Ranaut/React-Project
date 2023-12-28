@@ -1,7 +1,15 @@
 function Input(){
+    let inputdata="";
+    function changeHandler(event){
+        inputdata=event.target.value;
+    }
+    function buttonHandler(){
+        console.log(inputdata);
+    }
     return(
         <div>
-            this is input sec
+            <input type="text"  onChange={changeHandler}></input>
+            <button onClick={buttonHandler}>Click me</button>
         </div>
     );
 }
